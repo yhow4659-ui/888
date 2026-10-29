@@ -1,2 +1,0 @@
-
-if(!reduceMotion){let roamer=0;function wanderCats(){setTimeout(()=>{if(!document.hidden&&!$('#world').hidden&&$('#world').classList.contains('entered')){const cats=$$('[data-cat]'),cat=cats[roamer++%cats.length];cat.classList.remove('is-sleeping');cat.classList.add('is-walking','is-wandering');setTimeout(()=>cat.classList.remove('is-walking','is-wandering'),3600)}wanderCats()},7600+Math.random()*5000)}wanderCats();$$('[data-cat]').forEach(cat=>cat.addEventListener('click',()=>{cat.classList.add('is-wandering');setTimeout(()=>cat.classList.remove('is-wandering'),3600)}))}
